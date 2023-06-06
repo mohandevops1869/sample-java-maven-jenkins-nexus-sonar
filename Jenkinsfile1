@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage("to build stage"){
+            steps{
+                sh """
+                ls -lart
+                mvn install
+                """
+            }
+        }
+    }
+}
